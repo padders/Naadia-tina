@@ -1,0 +1,54 @@
+---
+label: Page Template
+hide_body: true
+fields:
+- type: blocks
+  name: page_section
+  label: Page
+  description: Test blocks
+  template_types:
+  - albums
+  - basic-content
+  - blog
+  - calendar
+  - cta-section
+  - cta-section-simple
+  - contact
+  - external_ad
+  - faq
+  - formatted-links
+  - gallery-masonry
+  - hero-partial
+  - partner-links
+  - old_gigs
+  - testimonial
+  - upcoming_gigs
+  - video-gallery-masonry
+  - embedded-video
+- name: title
+  type: text
+  config:
+    required: true
+  label: Title
+  description: Page Title
+- name: meta_description
+  type: text
+  config:
+    required: false
+  label: Meta Description
+  description: Meta Description
+- name: meta_og_image
+  label: Meta OG Image
+  description: Meta OG Image
+  type: file
+  hidden: false
+  config:
+    maxSize: 1
+    required: false
+pages:
+- content/_index.md
+- content/kids-concert-club.md
+- content/learn-with-naadia.md
+- content/press-media.md
+- content/projects.md
+- content/tour.md

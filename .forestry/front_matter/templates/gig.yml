@@ -1,0 +1,61 @@
+---
+label: Gigs
+hide_body: true
+fields:
+- name: gig_location
+  type: text
+  config:
+    required: true
+  label: Gig Location
+  description: The location of the gig
+- name: gig_band
+  type: text
+  config:
+    required: true
+  label: Band name
+  description: The name of the band (used by the meta data for search engines)
+  default: Naadia_Sheriff
+- name: gig_url
+  type: text
+  config:
+    required: true
+  label: Gig link
+  description: The link to the Gig page (for tickets sales / more info)
+- name: gig_date
+  type: datetime
+  label: Gig Date
+  description: The date of the gig
+  hidden: false
+  config:
+    date_format: DD/MM/YYYY
+    time_format: h:mm A ZZ
+    display_utc: false
+    required: true
+    export_format: YYYY-MM-DD h:mm A
+- name: gig_cost
+  type: number
+  label: Cost
+  description: The cost in GBP
+  hidden: false
+  config:
+    min: 0
+    step: 0.01
+  default: 0
+pages:
+- content/gigs/ISQ-Nottingham-Peggys-Skylight-17-July-2021.md
+- content/gigs/ISQ-Pizza-Express-8-July-2021.md
+- content/gigs/ISQ-Toulouse-Lautrec-20-Nov-2021.md
+- content/gigs/ISQ-nottingham.md
+- content/gigs/Juliet-Kelly-Herne-bay-Jazz-Festival-22-Aug-2021.md
+- content/gigs/Julietkellynov2021.md
+- content/gigs/Lara-Eidi-606.md
+- content/gigs/Lara-Eidi-Toulouse-Lautrec-14-Nov-2021.md
+- content/gigs/Maya_Youssef_21_6_23.md
+- content/gigs/Pizza-express-soho.md
+- content/gigs/bach-to-baby-e-dulwich.md
+- content/gigs/bach-to-baby-notting-hill.md
+- content/gigs/bach-to-baby-sydenham.md
+- content/gigs/bach-to-baby-west-dulwich.md
+- content/gigs/bach-to-baby.md
+- content/gigs/kate_dimbleby_gig.md
+- content/gigs/maya_youssef-28_4_23.md

@@ -1,0 +1,43 @@
+---
+label: Embedded Video
+hide_body: false
+fields:
+- name: watch
+  type: field_group_list
+  fields:
+  - name: type
+    type: select
+    default: youtube video
+    config:
+      required: true
+      options:
+      - youtube video
+      - youtube playlist
+      - vimeo video
+      source:
+        type: simple
+        section: 
+        file: 
+        path: 
+    label: type
+    description: Choose the video embed source
+  - name: embed_code
+    type: text
+    config:
+      required: false
+    label: Embed Code
+    description: <strong>For Youtube - </strong><br>Select <strong>'share'</strong>
+      under the video and copy the embed code into a text editor. Look for the section
+      similar to the following and copy the ID highlighted in bold<br>src="https://www.youtube-nocookie.com/embed/<strong>tNo43ZKbCjA</strong>"<br>
+      <strong>For a Youtube Playlist - </strong><br>copy the url into a text editor.
+      Look for the section similar to the following and copy the ID highlighted in
+      bold<br>https://www.youtube.com/watch?v=3e3UueDTB6w&list=<strong>PLf1pwso2W5-H_MlkF1SpwZNEkRbyyv_4V</strong><br>
+      <strong>For Vimeo - </strong><br>Select <strong>'share'</strong> under the video
+      and copy the link code into a text editor. Look for the section similar to the
+      following and copy the ID highlighted in bold<br>https://vimeo.com/<strong>178823364</strong>"
+  config:
+    min: 
+    max: 
+    labelField: 
+  description: Add the relevant embed id for the type you select
+  label: Embedded Video

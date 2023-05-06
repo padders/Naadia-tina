@@ -1,0 +1,63 @@
+{{"<!-- Fixed Navigation -->" | safeHTML}}
+<header id="navigation" class="navbar navigation">
+    <div class="container">
+        <div class="navbar-header">
+            {{"<!-- responsive nav button -->" | safeHTML}}
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            {{"<!-- /responsive nav button -->" | safeHTML}}
+
+            {{"<!-- logo -->" | safeHTML}}
+                <a class="navbar-brand logo" href="{{ .Site.BaseURL | absURL }}"><img class="img-fluid" src="{{ .Site.Params.Logo | absURL }}" alt="{{ .Site.Data.settings.params.site_name.sitename }}"></a>
+            {{"<!-- /logo -->" | safeHTML}}
+        </div>
+
+        {{"<!-- main nav -->" | safeHTML}}
+        <div class="flex-col-header">
+            <div class="col-md-12 social-header">
+                <ul class="list-inline list-inline-header">
+                        {{ with  .Site.Data.sitedata.footer.Facebook_Link }}   <li><a class="pr-2" href="{{ . }}" target="_blank"><i class="tf-ion-social-facebook"></i></a></li>{{ end }} 
+                        {{ with  .Site.Data.sitedata.footer.Twitter_Link }}   <li><a class="pr-2" href="{{ . }}" target="_blank"><i class="tf-ion-social-twitter"></i></a></li>{{ end }} 
+                        {{ with  .Site.Data.sitedata.footer.Google_Plus_Link }}   <li><a class="pr-2" href="{{ . }}" target="_blank"><i class="tf-ion-social-google-outline"></i></a></li>{{ end }} 
+                        {{ with  .Site.Data.sitedata.footer.YouTube_Link }}   <li><a class="pr-2" href="{{ . }}" target="_blank"><i class="tf-ion-social-youtube"></i></a></li>{{ end }} 
+                        {{ with  .Site.Data.sitedata.footer.Instagram_Link }}   <li><a class="pr-2" href="{{ . }}" target="_blank"><i class="tf-ion-social-instagram"></i></a></li>{{ end }} 
+                        {{ with  .Site.Data.sitedata.footer.LinkedIn_Link }}   <li><a class="pr-2" href="{{ . }}" target="_blank"><i class="tf-ion-social-linkedin"></i></a></li>{{ end }} 
+                        {{ with  .Site.Data.sitedata.footer.Pinterest_Link }}   <li><a class="pr-2" href="{{ . }}" target="_blank"><i class="tf-ion-social-pinterest-outline"></i></a></li>{{ end }} 
+                        {{ with  .Site.Data.sitedata.footer.Bandcamp_Link }}   <li><a class="pr-2" href="{{ . }}" target="_blank"><img class="social-header-image" src="/assets/icons/bc-logotype-light-128.png"/></a></li>{{ end }} 
+                        {{ with  .Site.Data.sitedata.footer.Soundcloud_Link }}   <li><a href="{{ . }}" target="_blank"><img class="social-header-image" src="/assets/icons/soundcloud-icon-white.png"/></a></li>{{ end }} 
+                </ul>
+            </div>
+            <nav class="collapse navbar-collapse navbar-right" role="Navigation">
+                <ul id="nav" class="nav navbar-nav navigation-menu">
+                    {{ range $.Site.Menus.nav }}
+                        {{ if .HasChildren }} 
+                            <li class="desktop-only"><a data-scroll href="{{ .URL }}">{{ .Name }} <i class="tf-ion-arrow-down-b"></i></a>
+                                <ul class="dropdown pt-2">
+                                    {{ range .Children }}
+                                    <li class="submenu">
+                                        <a href="{{ .URL }}">{{ .Name }}</a>
+                                    </li>
+                                    {{ end }}
+                                </ul>
+                            </li>
+                            <li class="mobile-only"><a data-scroll href="{{ .URL }}">{{ .Name }} <i class="tf-ion-arrow-down-b"></i></a>
+                            {{ range .Children }}
+                                <li class="mobile-only ml-2"><a data-scroll href="{{ .URL }}">{{ .Name }}</a>
+                            {{ end }}
+                            </li>
+                        {{ else }}
+                            <li><a data-scroll href="{{ .URL }}">{{ .Name }}</a>
+                        {{ end }}
+                    {{ end }}
+                </ul>
+            </nav>
+        </div>
+        {{"<!-- /main nav -->" | safeHTML}}
+
+    </div>
+</header>
+{{"<!-- End Fixed Navigation -->" | safeHTML}}

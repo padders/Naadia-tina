@@ -1,0 +1,61 @@
+assetDir = "static/assets/"
+baseURL = "https://www.naadiasheriff.com/"
+languageCode = "en-us"
+relativeurls = false
+summaryLength = 30
+theme = "meghna-hugo"
+title = "Naadia Sheriff"
+[[menu.nav]]
+name = "Education"
+weight = 6
+[[menu.nav]]
+parent = "About"
+name = "Bio"
+url = "/about"
+weight = 1
+[[menu.nav]]
+parent = "About"
+name = "Blog"
+url = "/categories/blog"
+weight = 2
+[[menu.nav]]
+parent = "About"
+name = "News"
+url = "/categories/news"
+weight = 3
+[[menu.nav]]
+name = "Music"
+URL = "/albums"
+weight = 2
+[params]
+custom_css = ["css/custom.css"]
+footerLogo = "images/footerLogo.jpg"
+gmapAPI = ""
+home = "Home"
+logo = "images/logo.png"
+[[params.footer.socialIcon]]
+icon = "tf-ion-social-facebook"
+url = "#"
+[[params.footer.socialIcon]]
+icon = "tf-ion-social-twitter"
+url = "#"
+[[params.footer.socialIcon]]
+icon = "tf-ion-social-google-outline"
+url = "#"
+[[params.footer.socialIcon]]
+icon = "tf-ion-social-youtube"
+url = "#"
+[[params.footer.socialIcon]]
+icon = "tf-ion-social-linkedin"
+url = "#"
+[[params.footer.socialIcon]]
+icon = "tf-ion-social-dribbble-outline"
+url = "#"
+[[params.footer.socialIcon]]
+icon = "tf-ion-social-pinterest-outline"
+url = "#"
+[permalinks]
+albums = "albums/:filename/"
+[taxonomies]
+category = "categories"
+tag = "tags"
