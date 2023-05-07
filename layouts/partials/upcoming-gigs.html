@@ -33,7 +33,7 @@
                 </div>
             </div>
         {{ else }}
-            {{ range sort (first .Partial.display_limit $gigs) ".Params.gig_date" }}
+            {{ range sort (last .Partial.display_limit $gigs) ".Params.gig_date" }}
                 {{ if (time .Params.gig_date).After now }}
                     {{ if or (eq $band_filter "") (eq $band_filter .Params.gig_band) }}
                         <div class="col-md-10 col-md-offset-1 gig-surround nopadding bg-light">

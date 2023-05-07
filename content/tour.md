@@ -23,14 +23,14 @@ thin_hero = true
 [[page_section]]
 all_gigs_url = "/tour"
 band_filter = ""
-display_limit = 10_000
+display_limit = 10
 section_title = "Upcoming Dates"
 template = "upcoming_gigs"
 
 [[page_section]]
 all_gigs_url = "/tour"
 band_filter = ""
-display_limit = 10_000
+display_limit = 10
 section_title = "Previous Dates"
 template = "old_gigs"
 +++
